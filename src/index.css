@@ -1,0 +1,88 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 18 18 18;
+    --foreground: 244 244 244;
+
+    --card: 26 26 26;
+    --card-foreground: 244 244 244;
+
+    --popover: 26 26 26;
+    --popover-foreground: 244 244 244;
+
+    --primary: 174 46 60;
+    --primary-foreground: 244 244 244;
+
+    --secondary: 42 42 42;
+    --secondary-foreground: 244 244 244;
+
+    --muted: 42 42 42;
+    --muted-foreground: 163 163 163;
+
+    --accent: 253 203 110;
+    --accent-foreground: 18 18 18;
+
+    --destructive: 220 38 38;
+    --destructive-foreground: 244 244 244;
+
+    --border: 42 42 42;
+    --input: 42 42 42;
+    --ring: 174 46 60;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 18 18 18;
+    --sidebar-foreground: 244 244 244;
+    --sidebar-primary: 174 46 60;
+    --sidebar-primary-foreground: 244 244 244;
+    --sidebar-accent: 42 42 42;
+    --sidebar-accent-foreground: 244 244 244;
+    --sidebar-border: 42 42 42;
+    --sidebar-ring: 174 46 60;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-brand-dark text-text-light font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #AE2E3C, #FDCB6E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient-brand {
+    background: linear-gradient(135deg, rgba(174, 46, 60, 0.1), rgba(253, 203, 110, 0.1));
+  }
+  
+  .border-gradient {
+    border-image: linear-gradient(135deg, #AE2E3C, #FDCB6E) 1;
+  }
+  
+  .hover-glow {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(174, 46, 60, 0.3);
+    transform: translateY(-2px);
+  }
+}
