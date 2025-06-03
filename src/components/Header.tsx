@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Menu, Search } from 'lucide-react';
+import {  Menu, Search } from 'lucide-react';
+import {Link} from 'react-router-dom';
 import {
   Command,
   CommandEmpty,
@@ -138,10 +139,12 @@ const Header = () => {
               </PopoverContent>
             </Popover>
 
-            {/* CTA Button */}
-            <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover-glow">
-              Get Started
-            </Button>
+            {/* CTA Button */}            
+<Link to="/contact-us">
+  <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover-glow">
+    Get Started
+  </Button>
+</Link>
           </div>
 
           {/* Mobile Menu Button */}

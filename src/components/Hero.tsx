@@ -1,7 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Code, Briefcase, Users } from 'lucide-react';
-
+import {Link} from 'react-router-dom';
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 pb-16 px-6 relative overflow-hidden">
@@ -37,15 +37,16 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover-glow flex items-center group">
-              Start Your Project
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" className="border-gray-600 text-white hover:bg-gray-800 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-              View Our Work
-            </Button>
-          </div>
+
+<div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+  <Link to="/contact-us">
+    <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover-glow flex items-center group">
+      Contact Us
+      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+    </Button>
+  </Link>
+</div>
+
 
           {/* Trust Indicators */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">

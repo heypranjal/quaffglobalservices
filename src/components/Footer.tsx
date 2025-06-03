@@ -14,7 +14,6 @@ const Footer = () => {
     "Our Team",
     "Case Studies",
     "Careers",
-    "Blog",
     "Contact Us"
   ];
 
