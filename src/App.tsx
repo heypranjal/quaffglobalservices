@@ -27,7 +27,7 @@ import MarketResearchBusinessAnalytics from "./pages/MarketResearchBusinessAnaly
 import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
 import HRStaffingServices from "./pages/HRandstaffing";
-
+import AboutUs  from "./pages/Aboutus";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -59,6 +59,7 @@ const App = () => (
           <Route path="/legal-process-outsourcing" element={<LegalProcessOutsourcing />} />
           <Route path="/market-research-business-analytics" element={<MarketResearchBusinessAnalytics />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/about" element={<AboutUs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
