@@ -110,7 +110,7 @@ const CustomerSupport = () => {
           </p>
           <Button 
             className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg font-semibold hover-glow"
-            onClick={() => window.location.href = '/#contact'}
+            onClick={() => window.location.href = '/contact-us'}
           >
             Get Started Today
           </Button>

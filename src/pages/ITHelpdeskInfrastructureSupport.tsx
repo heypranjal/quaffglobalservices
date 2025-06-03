@@ -125,19 +125,14 @@ const ITHelpdeskInfrastructureSupport = () => {
             Keep your business technology running smoothly with our comprehensive 24/7 IT support services. 
             From troubleshooting to system optimization, we've got you covered.
           </p>
-          <Button 
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg font-semibold hover-glow"
-            onClick={() => window.location.href = '/#contact'}
-          >
-            Get IT Support
-          </Button>
+          
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-12 px-6 bg-gray-900/50">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Our</span>{" "}
               <span className="text-gradient">Support Services</span>
@@ -176,9 +171,9 @@ const ITHelpdeskInfrastructureSupport = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-12 px-6 bg-brand-dark">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Our IT</span>{" "}
               <span className="text-gradient">Support Process</span>
@@ -212,9 +207,9 @@ const ITHelpdeskInfrastructureSupport = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-12 px-6 bg-gray-900/50">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Why Choose</span>{" "}
               <span className="text-gradient">Our IT Support?</span>
@@ -245,7 +240,7 @@ const ITHelpdeskInfrastructureSupport = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-12 px-6 bg-brand-dark">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Optimize Your IT Infrastructure?

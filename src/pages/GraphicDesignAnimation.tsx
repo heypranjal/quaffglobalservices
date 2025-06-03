@@ -80,17 +80,12 @@ const GraphicDesignAnimation = () => {
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Transform your brand identity with stunning visuals, captivating animations, and designs that speak to your audience's hearts and minds.
           </p>
-          <Button 
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg font-semibold hover-glow"
-            onClick={() => window.location.href = '/#contact'}
-          >
-            Explore Our Services
-          </Button>
+        
         </div>
       </section>
 
       {/* What We Create Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-12 px-6 bg-gray-900/50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -123,9 +118,9 @@ const GraphicDesignAnimation = () => {
       </section>
 
       {/* Creative Process Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-12 px-6 bg-brand-dark">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Our Creative</span>{" "}
               <span className="text-gradient">Process</span>
@@ -160,7 +155,7 @@ const GraphicDesignAnimation = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-12 px-6 bg-gray-900/50">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Transform Your Brand?

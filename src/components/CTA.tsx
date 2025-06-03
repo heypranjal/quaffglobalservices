@@ -28,32 +28,29 @@ const CTA = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-            <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover-glow flex items-center group">
+            <Button  onClick={() => window.location.href = '/contact-us'}
+            className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover-glow flex items-center group">
               <Mail className="mr-2 w-5 h-5" />
               Get Free Consultation
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" className="border-gray-600 text-white hover:bg-gray-800 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center">
-              <Phone className="mr-2 w-5 h-5" />
-              Schedule a Call
-            </Button>
+          
           </div>
 
           {/* Contact Info */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-accent font-semibold mb-2">Email</div>
-              <div className="text-gray-300">hello@quaffmedia.com</div>
-            </div>
-            <div className="text-center">
-              <div className="text-accent font-semibold mb-2">Phone</div>
-              <div className="text-gray-300">+1 (555) 123-4567</div>
-            </div>
-            <div className="text-center">
-              <div className="text-accent font-semibold mb-2">Response Time</div>
-              <div className="text-gray-300">Within 24 hours</div>
-            </div>
-          </div>
+<div className="w-full flex justify-center mt-8">
+  <div className="flex flex-col md:flex-row gap-8 text-center">
+    <div>
+      <div className="text-accent font-semibold mb-2">Phone</div>
+      <div className="text-gray-300">+1 (555) 123-4567</div>
+    </div>
+    <div>
+      <div className="text-accent font-semibold mb-2">Response Time</div>
+      <div className="text-gray-300">Within 24 hours</div>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
     </section>

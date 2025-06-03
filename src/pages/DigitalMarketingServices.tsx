@@ -250,19 +250,14 @@ const DigitalMarketingServices = () => {
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Amplify your online presence and drive measurable growth with data-driven marketing strategies that convert prospects into loyal customers.
           </p>
-          <Button 
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg font-semibold hover-glow"
-            onClick={() => window.location.href = '/#contact'}
-          >
-            Start Your Digital Growth
-          </Button>
+        
         </div>
       </section>
 
       {/* Marketing Arsenal Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-12 px-6 bg-gray-900/50">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Our</span>{" "}
               <span className="text-gradient">Marketing Arsenal</span>
@@ -293,9 +288,9 @@ const DigitalMarketingServices = () => {
       </section>
 
       {/* Specialized Processes Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-12 px-6 bg-brand-dark">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Our</span>{" "}
               <span className="text-gradient">Specialized Processes</span>
@@ -303,7 +298,7 @@ const DigitalMarketingServices = () => {
           </div>
 
           {/* SEO Process */}
-          <div className="mb-16">
+          <div className="mb-12">
             <h3 className="text-3xl font-bold text-white mb-8 text-center">
               🔍 SEO Process
             </h3>
@@ -325,7 +320,7 @@ const DigitalMarketingServices = () => {
           </div>
 
           {/* SEM/PPC Process */}
-          <div className="mb-16">
+          <div className="mb-12">
             <h3 className="text-3xl font-bold text-white mb-8 text-center">
               💰 SEM/PPC Process
             </h3>
@@ -347,7 +342,7 @@ const DigitalMarketingServices = () => {
           </div>
 
           {/* Social Media Process */}
-          <div className="mb-16">
+          <div className="mb-12">
             <h3 className="text-3xl font-bold text-white mb-8 text-center">
               📱 Social Media Process
             </h3>
@@ -369,7 +364,7 @@ const DigitalMarketingServices = () => {
           </div>
 
           {/* Email Marketing Process */}
-          <div className="mb-16">
+          <div className="mb-12">
             <h3 className="text-3xl font-bold text-white mb-8 text-center">
               📧 Email Marketing Process
             </h3>
@@ -393,9 +388,9 @@ const DigitalMarketingServices = () => {
       </section>
 
       {/* Overall Marketing Process Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-12 px-6 bg-gray-900/50">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Our Overall</span>{" "}
               <span className="text-gradient">Marketing Process</span>
@@ -431,9 +426,9 @@ const DigitalMarketingServices = () => {
       </section>
 
       {/* Strategic Approach Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-12 px-6 bg-brand-dark">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Our</span>{" "}
               <span className="text-gradient">Strategic Approach</span>
@@ -467,7 +462,7 @@ const DigitalMarketingServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-12 px-6 bg-gray-900/50">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Accelerate Your Digital Growth?

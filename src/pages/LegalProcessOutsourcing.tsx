@@ -133,19 +133,14 @@ const LegalProcessOutsourcing = () => {
             Streamline your legal operations with our comprehensive outsourcing services. Expert legal professionals 
             delivering accuracy, compliance, and efficiency across all legal processes.
           </p>
-          <Button 
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg font-semibold hover-glow"
-            onClick={() => window.location.href = '/#contact'}
-          >
-            Get Legal Support
-          </Button>
+         
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-12 px-6 bg-gray-900/50">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Our</span>{" "}
               <span className="text-gradient">Legal Services</span>
@@ -188,9 +183,9 @@ const LegalProcessOutsourcing = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-12 px-6 bg-brand-dark">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Our</span>{" "}
               <span className="text-gradient">LPO Process</span>
@@ -226,9 +221,9 @@ const LegalProcessOutsourcing = () => {
       </section>
 
       {/* Expertise Areas Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-12 px-6 bg-gray-900/50">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Legal</span>{" "}
               <span className="text-gradient">Expertise Areas</span>
@@ -262,9 +257,9 @@ const LegalProcessOutsourcing = () => {
       </section>
 
       {/* Security Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-12 px-6 bg-brand-dark">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Security &</span>{" "}
               <span className="text-gradient">Confidentiality</span>
@@ -298,9 +293,9 @@ const LegalProcessOutsourcing = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-12 px-6 bg-gray-900/50">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Why Choose</span>{" "}
               <span className="text-gradient">Our LPO Services?</span>
@@ -331,7 +326,7 @@ const LegalProcessOutsourcing = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-12 px-6 bg-brand-dark">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Streamline Your Legal Operations?
