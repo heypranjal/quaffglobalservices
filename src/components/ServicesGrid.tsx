@@ -6,10 +6,8 @@ import {
   Star,
   Zap,
   Puzzle,
-  Users, // 👥 equivalent
+  Users,
 } from 'lucide-react';
-
-import { link } from 'fs';
 
 const ServicesGrid = () => {
   const services = [
@@ -41,21 +39,19 @@ const ServicesGrid = () => {
       features: ["Expert Consulting", "Project Management", "Technical Support", "Professional Services"],
       link: "/technical-professional-services"
     },
-   
     {
       icon: Users,
       title: "Our HR & Staffing Services",
-     description: "Discover end-to-end HR and staffing services designed to empower your workforce and scale your business. From sourcing top-tier talent to managing the full employee lifecycle, we provide agile, customized solutions for every organizational need.",
-features: ["Talent Acquisition", "Global Hiring", "Executive Search", "HR & Payroll Solutions"],
-link: "/hr"
-
+      description: "Discover end-to-end HR and staffing services designed to empower your workforce and scale your business. From sourcing top-tier talent to managing the full employee lifecycle, we provide agile, customized solutions for every organizational need.",
+      features: ["Talent Acquisition", "Global Hiring", "Executive Search", "HR & Payroll Solutions"],
+      link: "/hr"
     },
-     {
+    {
       icon: Puzzle,
       title: "🧩 Need Something Else?",
       description: "We're here to help! If you're looking for services beyond what's listed, reach out to us — we offer custom solutions tailored to your unique needs.",
       features: ["Custom Solutions", "Flexible Services", "Consultation", "Tailored Approach"],
-      hasButton: true
+      link: "/contact-us"
     },
   ];
 
@@ -81,11 +77,7 @@ link: "/hr"
               key={index} 
               className="bg-gray-800/50 border-gray-700 hover:border-primary/50 transition-all duration-300 hover-glow group cursor-pointer"
               onClick={() => {
-                if (service.link) {
-                  window.location.href = service.link;
-                } else if (service.hasButton) {
-                  window.location.href = '#contact';
-                }
+                window.location.href = service.link;
               }}
             >
               <CardContent className="p-8">
@@ -111,29 +103,15 @@ link: "/hr"
                   ))}
                 </ul>
 
-                {service.hasButton && (
-                  <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-white"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.location.href = '#contact';
-                    }}
-                  >
-                    Contact us
-                  </Button>
-                )}
-
-                {service.link && (
-                  <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-white"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.location.href = service.link;
-                    }}
-                  >
-                    Learn More
-                  </Button>
-                )}
+                <Button 
+                  className="w-full bg-primary hover:bg-primary/90 text-white"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.location.href = service.link;
+                  }}
+                >
+                  Learn More
+                </Button>
               </CardContent>
             </Card>
           ))}
