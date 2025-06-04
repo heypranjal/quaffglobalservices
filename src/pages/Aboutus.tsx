@@ -18,7 +18,6 @@ import {
   Clock,
   Shield,
   TrendingUp,
-  Linkedin
 } from 'lucide-react';
 
 const AboutUs = () => {
@@ -136,7 +135,6 @@ const AboutUs = () => {
       name: "Priya Sharma",
       position: "Head of Operations",
       description: "Priya oversees our global operations and client delivery with expertise in process optimization and quality management. She ensures seamless execution across all service verticals.",
-      linkedin: "https://www.linkedin.com/in/priyasharma"
     },
     {
       initials: "RK",
@@ -349,14 +347,7 @@ const AboutUs = () => {
                         <h3 className="text-xl font-bold text-white mr-2 group-hover:text-accent transition-colors duration-300">
                           {member.name}
                         </h3>
-                        <a
-                          href={member.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-500 hover:text-blue-400"
-                        >
-                          <Linkedin className="w-5 h-5" />
-                        </a>
+                       
                       </div>
                       <div className="text-sm font-semibold text-accent mb-3">
                         {member.position}
