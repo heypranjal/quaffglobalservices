@@ -1,9 +1,9 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Index from "./pages/Index";
 import ITServices from "./pages/ITServices";
 import CustomSoftwareDevelopment from "./pages/CustomSoftwareDevelopment";
@@ -31,6 +31,9 @@ import AboutUs  from "./pages/Aboutus";
 import CaseStudyHalp from "./pages/CaseStudy1";
 import Casestudy2 from "./pages/Casestudy2";
 import Casestudy3 from "./pages/Casestudy3";
+import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
+import ScrollToTop from "./components/ScrollToTop";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -39,6 +42,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <ScrollToTopOnRouteChange />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/hr" element={<HRStaffingServices />} />
@@ -69,6 +73,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <ScrollToTop />  {/* <-- ScrollToTop here */}
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
