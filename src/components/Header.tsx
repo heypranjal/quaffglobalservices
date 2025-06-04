@@ -17,6 +17,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -71,12 +72,15 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Q</span>
-            </div>
-            <span className="text-xl font-bold text-white">Quaff Global Services</span>
-          </a>
+       <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+  <img
+    src="src\assets\logoquaff.png" // replace with your actual image path
+    alt="Quaff Global Services Logo"
+    className="w-12 h-12 rounded-full object-cover"
+  />
+  <span className="text-xl font-bold text-white">Quaff Global Services</span>
+</a>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
