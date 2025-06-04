@@ -7,13 +7,12 @@ const Footer = () => {
     { name: "Business Process Outsourcing (BPO)", slug: "bpo" },
     { name: "Digital & Creative Services", slug: "digital-creative-services" },
     { name: "Technical & Professional Services", slug: "technical-professional-services" },
+    { name: "HR & Staffing Services", slug: "hr" },
   ];
 
   const company = [
     "About Us",
     "Our Team",
-    "Case Studies",
-    "Careers",
     "Contact Us"
   ];
 
