@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Menu, Search, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import logo from "../assets/logoquaff.png"
 import {
   Command,
   CommandEmpty,
@@ -73,7 +74,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80">
             <img
-              src="/src/assets/logoquaff.png"
+              src={logo}
               alt="Quaff Global Logo"
               className="w-12 h-12 rounded-full object-cover"
             />
@@ -182,7 +183,7 @@ const Header = () => {
             {/* Logo on mobile */}
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/src/assets/logoquaff.png"
+                src={logo}
                 alt="Quaff Global"
                 className="w-10 h-10 rounded-full"
               />
