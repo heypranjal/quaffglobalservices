@@ -10,18 +10,18 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/ui/command";
+} from '@/components/ui/command';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from '@/components/ui/popover';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from '@/components/ui/dropdown-menu';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +31,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'About Us', href: '/about' },
-    { name: 'Contact Us', href: '/contact-us' }
+    { name: 'Contact Us', href: '/contact-us' },
   ];
 
   const serviceItems = [
@@ -39,29 +39,21 @@ const Header = () => {
     { name: 'Business Process Outsourcing (BPO)', href: '/bpo' },
     { name: 'Digital & Creative Services', href: '/digital-creative-services' },
     { name: 'Technical & Professional Services', href: '/technical-professional-services' },
-    { name: 'Our HR & Staffing Services', href: '/hr' }
+    { name: 'Our HR & Staffing Services', href: '/hr' },
   ];
 
   const searchableItems = [
     { title: 'IT Services', href: '/it-services', category: 'Services' },
-    { title: 'Custom Software Development', href: '/custom-software-development', category: 'Services' },
     { title: 'Web Development', href: '/web-development', category: 'Services' },
-    { title: 'Cloud Services', href: '/cloud-services', category: 'Services' },
-    { title: 'BPO', href: '/bpo', category: 'Services' },
-    { title: 'Customer Support', href: '/customer-support', category: 'Services' },
     { title: 'Mobile App Development', href: '/mobile-app-development', category: 'Services' },
-    { title: 'Finance & Accounting Services', href: '/finance-accounting-services', category: 'Services' },
-    { title: 'Human Resource Outsourcing', href: '/human-resource-outsourcing', category: 'Services' },
-    { title: 'Data Entry & Management', href: '/data-entry-management', category: 'Services' },
-    { title: 'Digital Creative Services', href: '/digital-creative-services', category: 'Services' },
-    { title: 'Graphic Design & Animation', href: '/graphic-design-animation', category: 'Services' },
     { title: 'Digital Marketing Services', href: '/digital-marketing-services', category: 'Services' },
-    { title: 'Technical & Professional Services', href: '/technical-professional-services', category: 'Services' },
-    { title: 'IT Helpdesk & Infrastructure Support', href: '/it-helpdesk-infrastructure-support', category: 'Services' },
+    { title: 'Customer Support', href: '/customer-support', category: 'Services' },
+    { title: 'BPO', href: '/bpo', category: 'Services' },
     { title: 'CAD & Engineering Design Services', href: '/cad-engineering-design-services', category: 'Services' },
+    { title: 'Finance & Accounting Services', href: '/finance-accounting-services', category: 'Services' },
     { title: 'Legal Process Outsourcing', href: '/legal-process-outsourcing', category: 'Services' },
-    { title: 'Market Research & Business Analytics', href: '/market-research-business-analytics', category: 'Services' },
-    { title: 'Our HR and Staffing Services', href: '/hr', category: 'Services' },
+    { title: 'Cloud Services', href: '/cloud-services', category: 'Services' },
+    { title: 'HR & Staffing Services', href: '/hr', category: 'Services' },
   ];
 
   const filteredItems = searchableItems.filter(item =>
@@ -69,12 +61,7 @@ const Header = () => {
   );
 
   const handleSearchSelect = (href: string) => {
-    if (href.startsWith('#')) {
-      const element = document.querySelector(href);
-      element?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.href = href;
-    }
+    window.location.href = href;
     setIsSearchOpen(false);
     setSearchValue('');
   };
@@ -84,23 +71,22 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+          <Link to="/" className="flex items-center space-x-2 hover:opacity-80">
             <img
-              src="src\assets\logoquaff.png" // replace with your actual image path
-              alt="Quaff Global Services Logo"
+              src="/src/assets/logoquaff.png"
+              alt="Quaff Global Logo"
               className="w-12 h-12 rounded-full object-cover"
             />
             <span className="text-xl font-bold text-white">Quaff Global Services</span>
-          </a>
+          </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">
-            {/* Services Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className="flex items-center text-text-light hover:text-accent transition-colors duration-300 font-medium group">
+                <button className="flex items-center text-white hover:text-accent font-medium group">
                   Services
-                  <ChevronDown className="ml-1 h-4 w-4 transition-transform group-data-[state=open]:rotate-180" />
+                  <ChevronDown className="ml-1 h-4 w-4 group-data-[state=open]:rotate-180 transition-transform" />
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-64 bg-gray-800 border-gray-600">
@@ -108,7 +94,7 @@ const Header = () => {
                   <DropdownMenuItem key={item.name} asChild>
                     <Link
                       to={item.href}
-                      className="text-gray-200 hover:text-white hover:bg-gray-700 cursor-pointer px-3 py-2 text-sm"
+                      className="block px-3 py-2 text-sm text-white hover:bg-gray-700"
                     >
                       {item.name}
                     </Link>
@@ -117,27 +103,24 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* Other Nav Items */}
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
-                className="text-text-light hover:text-accent transition-colors duration-300 font-medium"
+                to={item.href}
+                className="text-white hover:text-accent font-medium"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
-          {/* Search and CTA Button */}
+          {/* Search + CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            {/* Search Bar */}
             <Popover open={isSearchOpen} onOpenChange={setIsSearchOpen}>
               <PopoverTrigger asChild>
                 <Button
                   variant="outline"
                   className="w-64 justify-start text-gray-400 border-gray-600 bg-gray-800/50 hover:bg-gray-700/50"
-                  onClick={() => setIsSearchOpen(true)}
                 >
                   <Search className="mr-2 h-4 w-4" />
                   Search services...
@@ -177,9 +160,8 @@ const Header = () => {
               </PopoverContent>
             </Popover>
 
-            {/* CTA Button */}            
             <Link to="/contact-us">
-              <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover-glow">
+              <Button className="bg-primary text-white px-6 py-2 rounded-lg font-semibold">
                 Get Started
               </Button>
             </Link>
@@ -197,15 +179,25 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-700">
+            {/* Logo on mobile */}
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="/src/assets/logoquaff.png"
+                alt="Quaff Global"
+                className="w-10 h-10 rounded-full"
+              />
+              <span className="text-white font-semibold text-lg">Quaff Global Services</span>
+            </div>
+
             {/* Mobile Search */}
-            <div className="mt-4 mb-4">
+            <div className="mb-4">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+                <Search className="absolute left-3 top-2.5 text-gray-400 h-4 w-4" />
                 <Input
                   placeholder="Search services..."
                   value={searchValue}
                   onChange={(e) => setSearchValue(e.target.value)}
-                  className="pl-10 bg-gray-800/50 border-gray-600 text-white placeholder-gray-400"
+                  className="pl-10 bg-gray-800 text-white border-gray-600"
                 />
               </div>
               {searchValue && (
@@ -215,7 +207,7 @@ const Header = () => {
                       <button
                         key={item.href}
                         onClick={() => handleSearchSelect(item.href)}
-                        className="w-full text-left px-3 py-2 text-gray-200 hover:bg-gray-700 transition-colors"
+                        className="w-full text-left px-3 py-2 text-gray-200 hover:bg-gray-700"
                       >
                         <div className="text-sm font-medium">{item.title}</div>
                         <div className="text-xs text-gray-400">{item.category}</div>
@@ -228,47 +220,47 @@ const Header = () => {
               )}
             </div>
 
-            <nav className="flex flex-col space-y-4">
-              {/* Mobile Services Section */}
-              <div>
-                <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="flex items-center justify-between w-full text-text-light hover:text-accent transition-colors duration-300 font-medium"
-                >
-                  Services
-                  <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {isServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {serviceItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        className="block text-gray-300 hover:text-accent transition-colors duration-300 text-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+            {/* Services Dropdown */}
+            <div>
+              <button
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className="flex items-center justify-between w-full text-white font-medium"
+              >
+                Services
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {isServicesOpen && (
+                <div className="mt-2 ml-4 space-y-2">
+                  {serviceItems.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="block text-gray-300 hover:text-accent text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
-              {/* Other Mobile Nav Items */}
+            {/* Other Links */}
+            <div className="mt-4 space-y-2">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
-                  className="text-text-light hover:text-accent transition-colors duration-300 font-medium"
+                  to={item.href}
+                  className="block text-white font-medium hover:text-accent"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
-              <Button className="bg-primary hover:bg-primary/90 text-white w-full mt-4">
-                Get Started
-              </Button>
-            </nav>
+              <Button className="w-full mt-4 bg-primary text-white">Get Started</Button>
+            </div>
           </div>
         )}
       </div>

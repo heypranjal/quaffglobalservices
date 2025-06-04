@@ -12,7 +12,7 @@ const CaseStudy2 = () => {
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-white">Case Study 2:</span>{" "}
+            <span className="text-white">Case Study:</span>{" "}
             <span className="text-gradient">HR & Staffing Services</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
