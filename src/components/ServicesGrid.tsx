@@ -103,15 +103,16 @@ const ServicesGrid = () => {
                   ))}
                 </ul>
 
-                <Button 
-                  className="w-full bg-primary hover:bg-primary/90 text-white"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    window.location.href = service.link;
-                  }}
-                >
-                  Learn More
-                </Button>
+               <Button 
+  className="w-full bg-primary hover:bg-primary/90 text-white"
+  onClick={(e) => {
+    e.stopPropagation();
+    window.location.href = service.link;
+  }}
+>
+  {service.title.includes("Need Something Else") ? "Contact Us" : "Learn More"}
+</Button>
+
               </CardContent>
             </Card>
           ))}

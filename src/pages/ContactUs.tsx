@@ -37,23 +37,51 @@ const ContactUs = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (response.ok && result.success) {
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We'll get back to you soon.",
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        service: '',
+        address: '',
+        message: '',
+      });
+    } else {
+      toast({
+        title: "Failed to send",
+        description: result.error || "Please try again.",
+        variant: "destructive",
+      });
+    }
+  } catch (error) {
+    console.error('Submission Error:', error);
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
+      title: "Error",
+      description: "An error occurred. Please try later.",
+      variant: "destructive",
     });
-    // Reset form
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      service: '',
-      address: '',
-      message: ''
-    });
-  };
+  }
+};
 
   return (
     <div className="min-h-screen bg-brand-dark">

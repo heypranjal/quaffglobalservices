@@ -112,11 +112,15 @@ const CaseStudyHalp = () => {
       <section className="py-20 px-6 bg-gray-900/50">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Results</h2>
-          <ul className="text-left max-w-3xl mx-auto space-y-4 text-gray-300 text-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {results.map((point, idx) => (
-              <li key={idx}>✅ {point}</li>
+              <Card key={idx} className="bg-gray-800/50 border-gray-700">
+                <CardContent className="p-6 text-gray-300 text-left text-lg">
+                  ✅ {point}
+                </CardContent>
+              </Card>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
@@ -124,11 +128,15 @@ const CaseStudyHalp = () => {
       <section className="py-20 px-6 bg-brand-dark">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Key Deliverables</h2>
-          <ul className="text-left max-w-3xl mx-auto space-y-4 text-gray-300 text-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {deliverables.map((item, index) => (
-              <li key={index}>🎁 {item}</li>
+              <Card key={index} className="bg-gray-800/50 border-gray-700">
+                <CardContent className="p-6 text-gray-300 text-left text-lg">
+                  🎁 {item}
+                </CardContent>
+              </Card>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
