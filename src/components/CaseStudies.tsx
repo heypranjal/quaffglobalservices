@@ -1,35 +1,44 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Code, Users, Star } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const CaseStudies = () => {
+  const navigate = useNavigate();
+  
   const caseStudies = [
     {
+      id: 'halp',
       title: "Career Accelerator Digital Transformation",
       category: "Technology Development",
-      description: "Complete digital revamp of Halp’s online presence to boost program enrollments, improve brand visibility, and drive career empowerment across global markets.",
+      description: "Complete digital revamp of Halp's online presence to boost program enrollments, improve brand visibility, and drive career empowerment across global markets.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3",
       results: ["180% Increase in Program Enrollments","250% Rise in Qualified Applicants","65% Longer Session Duration","40% Growth in Employer Partnerships","85% Job Placement Rate Visibility"],
       tech: ["React", "Node.js", "AWS", "PostgreSQL"]
     },
     {
+      id: 'aveine',
       title: "HR & Staffing Expansion for Global Wine-Tech Startup",
       category: "HR & Staffing Expansion for Global Wine-Tech Startup",
-      description: "End-to-end HR transformation for Aveine, enabling global expansion through strategic recruitment, cross-cultural team building, and international compliance..",
+      description: "End-to-end HR transformation for Aveine, enabling global expansion through strategic recruitment, cross-cultural team building, and international compliance.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3",
       results: ["25+ Hires Across 8 Countries", "60% Faster Time-to-Hire", "95% Candidate Retention Rate", "Operations Established in 4 New Markets", "30% Boost in Employee Satisfaction"],
       tech: ["BambooHR", "Deel", "Notion", "Slack", "ATS Platforms (Greenhouse, Lever)"]
     },
     {
+      id: 'hungama',
       title: "Digital Entertainment BPO Transformation",
       category: "Digital Entertainment BPO Transformation",
-      description: "Scalable business process outsourcing for Hungama to streamline content operations, multilingual customer support, and analytics during exponential user growth..",
+      description: "Scalable business process outsourcing for Hungama to streamline content operations, multilingual customer support, and analytics during exponential user growth.",
       image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3",
-      results: ["40% Reduction in Operational Costs", "60% Faster Content Processing", "25% Boost in Recommendation Engine Accuracy","3x User Growth Supported Without Cost Spike", "4.6/5 Customer Satisfaction Score",],
+      results: ["40% Reduction in Operational Costs", "60% Faster Content Processing", "25% Boost in Recommendation Engine Accuracy","3x User Growth Supported Without Cost Spike", "4.6/5 Customer Satisfaction Score"],
       tech: ["Zendesk", "Freshdesk", "Power BI", "Custom CMS Integrations"]
     }
   ];
+
+  const handleViewDetails = (caseStudyId) => {
+    navigate(`/${caseStudyId}`);
+  };
 
   return (
     <section id="case-studies" className="py-20 px-6 bg-gray-900/30">
@@ -97,20 +106,17 @@ const CaseStudies = () => {
                   </div>
                 </div>
 
-                <Button variant="outline" className="w-full border-gray-600 text-white hover:bg-primary hover:border-primary transition-all duration-300 group">
+                <Button 
+                  variant="outline" 
+                  className="w-full border-gray-600 text-white hover:bg-primary hover:border-primary transition-all duration-300 group"
+                  onClick={() => handleViewDetails(study.id)}
+                >
                   View Details
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="text-center">
-          {/* <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover-glow">
-            View All Case Studies
-          </Button> */}
         </div>
       </div>
     </section>
