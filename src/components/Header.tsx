@@ -39,7 +39,7 @@ const Header = () => {
     { name: 'Business Process Outsourcing (BPO)', href: '/bpo' },
     { name: 'Digital & Creative Services', href: '/digital-creative-services' },
     { name: 'Technical & Professional Services', href: '/technical-professional-services' },
-    { name: 'Our HR & Staffing Services', href: '/hr' },
+    { name: 'HR & Staffing Services', href: '/hr' },
   ];
 
   const searchableItems = [
