@@ -41,7 +41,7 @@ const ServicesGrid = () => {
     },
     {
       icon: Users,
-      title: "Our HR & Staffing Services",
+      title: "HR & Staffing Services",
       description: "Discover end-to-end HR and staffing services designed to empower your workforce and scale your business. From sourcing top-tier talent to managing the full employee lifecycle, we provide agile, customized solutions for every organizational need.",
       features: ["Talent Acquisition", "Global Hiring", "Executive Search", "HR & Payroll Solutions"],
       link: "/hr"

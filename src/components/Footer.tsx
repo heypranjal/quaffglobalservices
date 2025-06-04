@@ -93,22 +93,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 pt-8">
+        <div className="border-t border-gray-700 pt-8 flex justify-center items-center">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2025 Quaff Media. All rights reserved.
+              © 2025 Quaff Global Services. All rights reserved.
             </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <Link to="/privacy-policy" className="hover:text-accent transition-colors duration-300">
-                Privacy Policy
-              </Link>
-              <Link to="/terms-of-service" className="hover:text-accent transition-colors duration-300">
-                Terms of Service
-              </Link>
-              <Link to="/cookie-policy" className="hover:text-accent transition-colors duration-300">
-                Cookie Policy
-              </Link>
-            </div>
+          
           </div>
         </div>
       </div>
