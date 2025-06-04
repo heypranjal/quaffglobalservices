@@ -167,12 +167,7 @@ const HRStaffingServices = () => {
                       <p className="text-gray-300 leading-relaxed mb-6">
                         {service.description}
                       </p>
-                      <Button
-                        className="bg-primary hover:bg-primary/90 text-white"
-                        onClick={() => window.location.href = service.link}
-                      >
-                        Learn More →
-                      </Button>
+                    
                     </div>
                   </div>
                 </CardContent>

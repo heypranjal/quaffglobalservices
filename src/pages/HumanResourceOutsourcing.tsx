@@ -8,7 +8,7 @@ const HumanResourceOutsourcing = () => {
   const stats = [
     { value: "95%", label: "Client Satisfaction" },
     { value: "24/7", label: "HR Support" },
-    { value: "500+", label: "Companies Served" },
+    { value: "25+", label: "Companies Served" },
     { value: "48hrs", label: "Average Response" }
   ];
 

@@ -38,20 +38,20 @@ const CaseStudyHalp = () => {
   ];
 
   const results = [
-    '📈 180% increase in program enrollment within 6 months',
-    '🚀 250% growth in qualified applicants through brand recognition',
-    '⏱️ 65% longer session durations on key pages',
-    '🤝 40% more employer partnerships through improved showcases',
-    '🎯 85% job placement rate visibility via content marketing'
+    ' 180% increase in program enrollment within 6 months',
+    ' 250% growth in qualified applicants through brand recognition',
+    ' 65% longer session durations on key pages',
+    ' 40% more employer partnerships through improved showcases',
+    ' 85% job placement rate visibility via content marketing'
   ];
 
   const deliverables = [
-    '🎨 Complete brand identity system focused on career transformation',
-    '🌐 Responsive website with integrated assessment tools',
-    '📚 Library of 75+ marketing assets including success templates',
-    '🎥 12-part video series showcasing transformation stories',
-    '📅 Social media calendar focused on development and growth',
-    '🧭 Career mapping tools and visual pathways'
+    ' Complete brand identity system focused on career transformation',
+    ' Responsive website with integrated assessment tools',
+    ' Library of 75+ marketing assets including success templates',
+    ' 12-part video series showcasing transformation stories',
+    ' Social media calendar focused on development and growth',
+    ' Career mapping tools and visual pathways'
   ];
 
   return (
@@ -132,7 +132,7 @@ const CaseStudyHalp = () => {
             {deliverables.map((item, index) => (
               <Card key={index} className="bg-gray-800/50 border-gray-700">
                 <CardContent className="p-6 text-gray-300 text-left text-lg">
-                  🎁 {item}
+                   {item}
                 </CardContent>
               </Card>
             ))}
