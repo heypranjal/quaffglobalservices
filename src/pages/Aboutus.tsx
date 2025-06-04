@@ -273,12 +273,12 @@ const AboutUs = () => {
             </h2>
           </div>
           
-          <Card className="bg-gray-800/50 border-gray-700 hover:border-primary/50 transition-all duration-300 hover-glow max-w-4xl mx-auto">
+          {/* <Card className="bg-gray-800/50 border-gray-700 hover:border-primary/50 transition-all duration-300 hover-glow max-w-4xl mx-auto"> */}
             <CardContent className="p-8">
               <div className="flex items-start">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                {/* <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
                   <Target className="w-8 h-8 text-white" />
-                </div>
+                </div> */}
                 <div>
                   <p className="text-lg text-gray-300 leading-relaxed">
                     We are committed to providing world-class technology solutions and business process outsourcing services that enable our clients to focus on their core competencies while we handle their operational and technical challenges. Our goal is to be the trusted partner that accelerates growth and innovation for businesses of all sizes.
@@ -286,7 +286,7 @@ const AboutUs = () => {
                 </div>
               </div>
             </CardContent>
-          </Card>
+          {/* </Card> */}
         </div>
       </section>
 
@@ -336,49 +336,48 @@ const AboutUs = () => {
         </div>
       </section>
       {/* Meet Our Team */}
-        {/* Meet Our Team */}
-      <section className="py-20 px-6 bg-brand-dark">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-white">Meet Our</span>{" "}
-              <span className="text-gradient">Team</span>
-            </h2>
-          </div>
+       {/* Meet Our Team */}{/* Meet Our Team */}
+<section className="py-20 px-6 bg-brand-dark">
+  <div className="container mx-auto">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <span className="text-white">Meet Our</span>{" "}
+        <span className="text-gradient">Team</span>
+      </h2>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card
-                key={index}
-                className="bg-gray-800/50 border-gray-700 hover:border-primary/50 transition-all duration-300 hover-glow group"
-              >
-                <CardContent className="p-8">
-                  <div className="flex items-start">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-16 h-16 rounded-full object-cover mr-6 group-hover:scale-110 transition-transform duration-300"
-                    />
-                    <div>
-                      <div className="flex items-center mb-1">
-                        <h3 className="text-xl font-bold text-white mr-2 group-hover:text-accent transition-colors duration-300">
-                          {member.name}
-                        </h3>
-                      </div>
-                      <div className="text-sm font-semibold text-accent mb-3">
-                        {member.position}
-                      </div>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        {member.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {teamMembers.map((member, index) => (
+        <Card
+          key={index}
+          className="bg-gray-800/50 border-gray-700 hover:border-primary/50 transition-all duration-300 hover-glow group"
+        >
+          <CardContent className="p-6 md:p-8">
+            <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-20 h-20 rounded-full object-cover mb-4 md:mb-0 md:mr-6 group-hover:scale-110 transition-transform duration-300"
+              />
+              <div>
+                <h3 className="text-xl font-bold text-white mb-1 group-hover:text-accent transition-colors duration-300">
+                  {member.name}
+                </h3>
+                <div className="text-sm font-semibold text-accent mb-3">
+                  {member.position}
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {member.description}
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
 
 
       {/* CTA + Footer */}

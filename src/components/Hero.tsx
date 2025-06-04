@@ -16,10 +16,10 @@ const Hero = () => {
       <div className="container mx-auto relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           {/* Badge */}
-          <div className="inline-flex items-center bg-gray-800/50 border border-gray-700 rounded-full px-4 py-2 mb-8">
+          {/* <div className="inline-flex items-center bg-gray-800/50 border border-gray-700 rounded-full px-4 py-2 mb-8">
             <span className="text-accent text-sm font-semibold">Digital Excellence</span>
             <div className="w-2 h-2 bg-accent rounded-full ml-2 animate-pulse"></div>
-          </div>
+          </div> */}
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">

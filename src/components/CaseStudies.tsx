@@ -9,30 +9,30 @@ const CaseStudies = () => {
   const caseStudies = [
     {
       id: 'halp',
-      title: "Career Accelerator Digital Transformation",
-      category: "Technology Development",
+      title: "Global Career Empowerment through Digital Revamp",
+      // category: "Technology Development",
       description: "Complete digital revamp of Halp's online presence to boost program enrollments, improve brand visibility, and drive career empowerment across global markets.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3",
       results: ["180% Increase in Program Enrollments","250% Rise in Qualified Applicants","65% Longer Session Duration","40% Growth in Employer Partnerships","85% Job Placement Rate Visibility"],
-      tech: ["React", "Node.js", "AWS", "PostgreSQL"]
+      // tech: ["React", "Node.js", "AWS", "PostgreSQL"]
     },
     {
       id: 'aveine',
       title: "HR & Staffing Expansion for Global Wine-Tech Startup",
-      category: "HR & Staffing Expansion for Global Wine-Tech Startup",
+      // category: "HR & Staffing Expansion for Global Wine-Tech Startup",
       description: "End-to-end HR transformation for Aveine, enabling global expansion through strategic recruitment, cross-cultural team building, and international compliance.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3",
       results: ["25+ Hires Across 8 Countries", "60% Faster Time-to-Hire", "95% Candidate Retention Rate", "Operations Established in 4 New Markets", "30% Boost in Employee Satisfaction"],
-      tech: ["BambooHR", "Deel", "Notion", "Slack", "ATS Platforms (Greenhouse, Lever)"]
+      // tech: ["BambooHR", "Deel", "Notion", "Slack", "ATS Platforms (Greenhouse, Lever)"]
     },
     {
       id: 'hungama',
-      title: "Digital Entertainment BPO Transformation",
-      category: "Digital Entertainment BPO Transformation",
+      title: "Scalable BPO Transformation for Digital Entertainment Growth",
+      // category: "Digital Entertainment BPO Transformation",
       description: "Scalable business process outsourcing for Hungama to streamline content operations, multilingual customer support, and analytics during exponential user growth.",
       image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3",
       results: ["40% Reduction in Operational Costs", "60% Faster Content Processing", "25% Boost in Recommendation Engine Accuracy","3x User Growth Supported Without Cost Spike", "4.6/5 Customer Satisfaction Score"],
-      tech: ["Zendesk", "Freshdesk", "Power BI", "Custom CMS Integrations"]
+      // tech: ["Zendesk", "Freshdesk", "Power BI", "Custom CMS Integrations"]
     }
   ];
 
@@ -66,9 +66,7 @@ const CaseStudies = () => {
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">
-                    {study.category}
-                  </span>
+                
                 </div>
               </div>
               
@@ -95,16 +93,7 @@ const CaseStudies = () => {
                 </div>
 
                 {/* Technologies */}
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-accent mb-2">Technologies:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {study.tech.map((tech, techIndex) => (
-                      <span key={techIndex} className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                
 
                 <Button 
                   variant="outline" 
