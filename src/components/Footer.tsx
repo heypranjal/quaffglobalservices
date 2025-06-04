@@ -37,15 +37,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Mail className="w-5 h-5 text-accent mr-3" />
-                hello@quaffmedia.com
+                info@quaffglobalservices.com
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="w-5 h-5 text-accent mr-3" />
-                +1 (555) 123-4567
+                +91 9999293689
               </div>
               <div className="flex items-center text-gray-300">
                 <MapPin className="w-5 h-5 text-accent mr-3" />
-                San Francisco, CA
+                    Amity Innovation center, sector-125, Noida. 
               </div>
             </div>
           </div>
