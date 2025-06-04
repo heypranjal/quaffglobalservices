@@ -5,12 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const DataEntryManagement = () => {
-  const stats = [
-    { value: "99.9%", label: "Accuracy Rate", emoji: "⚡" },
-    { value: "24hr", label: "Turnaround Time", emoji: "🚀" },
-    { value: "1M+", label: "Records Processed", emoji: "📊" },
-    { value: "100%", label: "Data Security", emoji: "🛡️" }
-  ];
+  
 
   const crmSteps = [
     {
@@ -139,7 +134,7 @@ const DataEntryManagement = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 px-6 bg-gray-900/50">
+      {/* <section className="py-12 px-6 bg-gray-900/50">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -151,7 +146,7 @@ const DataEntryManagement = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CRM Updates Section */}
       <section className="py-20 px-6 bg-brand-dark">
