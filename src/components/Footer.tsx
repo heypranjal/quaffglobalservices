@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import logo  from '../assets/logoquaff.png';
 
 const Footer = () => {
   const services = [
@@ -24,9 +25,14 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Q</span>
-              </div>
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+  <img
+    src={logo}
+    alt="Logo"
+    className="w-10 h-10 object-contain"
+  />
+</div>
+
               <span className="text-xl font-bold text-white">Quaff Global Services</span>
             </div>
 

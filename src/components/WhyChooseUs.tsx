@@ -36,10 +36,10 @@ const WhyChooseUs = () => {
   ];
 
   const stats = [
-    { number: "150+", label: "Projects Delivered" },
+    { number: "50+", label: "Projects Delivered" },
     { number: "98%", label: "Client Satisfaction" },
-    { number: "50+", label: "Team Members" },
-    { number: "10+", label: "Years Experience" }
+    { number: "15+", label: "Team Members" },
+    { number: "9+", label: "Years Experience" }
   ];
 
   return (

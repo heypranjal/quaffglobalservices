@@ -48,7 +48,7 @@ const ServicesGrid = () => {
     },
     {
       icon: Puzzle,
-      title: "🧩 Need Something Else?",
+      title: "Need Something Else?",
       description: "We're here to help! If you're looking for services beyond what's listed, reach out to us — we offer custom solutions tailored to your unique needs.",
       features: ["Custom Solutions", "Flexible Services", "Consultation", "Tailored Approach"],
       link: "/contact-us"
