@@ -6,6 +6,7 @@ import sarthak from '../assets/sarthak.jpg';
 import shashank from '../assets/shashank.jpeg';
 import utkarsh from '../assets/utkarsh.jpeg';
 import palak from '../assets/palakarora.jpg';
+
 import {
   Users,
   Globe,
@@ -22,6 +23,7 @@ import {
   Clock,
   Shield,
   TrendingUp,
+  Linkedin
 } from 'lucide-react';
 
 const AboutUs = () => {
@@ -126,7 +128,7 @@ const AboutUs = () => {
     }
   ];
 
-  const teamMembers = [
+    const teamMembers = [
     {
       image: sarthak,
       name: "Sarthak Agarwal",
@@ -156,6 +158,8 @@ const AboutUs = () => {
     }
   ];
 
+
+
   const stats = [
     { icon: Building, number: "15+", label: "Service Categories" },
     { icon: Clock, number: "24/7", label: "Support Available" },
@@ -167,9 +171,172 @@ const AboutUs = () => {
     <div className="min-h-screen bg-brand-dark">
       <Header />
 
-      {/* ... other sections (Hero, Story, Founding Team, Leadership, Mission, Services) ... */}
+  {/* Hero Section */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <span className="text-white">About</span>{" "}
+            <span className="text-gradient">Quaff Global Services</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Empowering businesses worldwide with innovative technology solutions and comprehensive outsourcing services
+          </p>
+        </div>
+      </section>
 
+      {/* Our Story */}
+      <section className="py-20 px-6 bg-gray-900/50">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-white">Our</span>{" "}
+              <span className="text-gradient">Story</span>
+            </h2>
+            <div className="flex justify-center items-center mb-8">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+                <span className="text-3xl font-bold text-white">QGS</span>
+              </div>
+            </div>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Quaff Global Services was founded by a diverse team of accomplished entrepreneurs who bring together decades of combined expertise across technology, business, and digital innovation.
+            </p>
+          </div>
+
+          {/* Founding Team */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-white text-center mb-8">Our Founding Team:</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {foundingTeam.map((member, index) => (
+                <Card 
+                  key={index} 
+                  className="bg-gray-800/50 border-gray-700 hover:border-primary/50 transition-all duration-300 hover-glow group"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex items-start">
+                      <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-2xl">{member.icon}</span>
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-white mb-2 group-hover:text-accent transition-colors duration-300">
+                          {member.title}
+                        </h4>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          {member.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Leadership Team */}
+          <div>
+            <h3 className="text-2xl font-bold text-white text-center mb-8">Our Core Leadership Team:</h3>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {leadershipTeam.map((leader, index) => (
+                <Card 
+                  key={index} 
+                  className="bg-gray-800/50 border-gray-700 hover:border-primary/50 transition-all duration-300 hover-glow group"
+                >
+                  <CardContent className="p-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-2xl">{leader.icon}</span>
+                      </div>
+                      <h4 className="text-lg font-bold text-white mb-2 group-hover:text-accent transition-colors duration-300">
+                        {leader.title}
+                      </h4>
+                      <div className="text-xs text-accent font-semibold mb-3">
+                        {leader.company}
+                      </div>
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        {leader.description}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Mission */}
+      <section className="py-20 px-6 bg-brand-dark">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-white">Our</span>{" "}
+              <span className="text-gradient">Mission</span>
+            </h2>
+          </div>
+          
+          <Card className="bg-gray-800/50 border-gray-700 hover:border-primary/50 transition-all duration-300 hover-glow max-w-4xl mx-auto">
+            <CardContent className="p-8">
+              <div className="flex items-start">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <p className="text-lg text-gray-300 leading-relaxed">
+                    We are committed to providing world-class technology solutions and business process outsourcing services that enable our clients to focus on their core competencies while we handle their operational and technical challenges. Our goal is to be the trusted partner that accelerates growth and innovation for businesses of all sizes.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Our Services */}
+      <section className="py-20 px-6 bg-gray-900/50">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-white">Our</span>{" "}
+              <span className="text-gradient">Services</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Card 
+                key={index} 
+                className="bg-gray-800/50 border-gray-700 hover:border-primary/50 transition-all duration-300 hover-glow group"
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-accent mb-1">
+                        {service.category}
+                      </div>
+                      <h3 className="text-lg font-bold text-white group-hover:text-accent transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-2">
+                    {service.services.map((item, serviceIndex) => (
+                      <li key={serviceIndex} className="flex items-start text-gray-400">
+                        <div className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                        <span className="text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Meet Our Team */}
+        {/* Meet Our Team */}
       <section className="py-20 px-6 bg-brand-dark">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -212,6 +379,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
 
       {/* CTA + Footer */}
       <section className="py-20 px-6 bg-brand-dark text-center">
