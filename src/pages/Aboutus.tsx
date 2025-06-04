@@ -187,9 +187,7 @@ const AboutUs = () => {
               <span className="text-gradient">Story</span>
             </h2>
             <div className="flex justify-center items-center mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-3xl font-bold text-white">QGS</span>
-              </div>
+             
             </div>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Quaff Global Services was founded by a diverse team of accomplished entrepreneurs who bring together decades of combined expertise across technology, business, and digital innovation.
@@ -266,9 +264,7 @@ const AboutUs = () => {
               <span className="text-gradient">Mission</span>
             </h2>
           </div>
-          
-          <Card className="bg-gray-800/50 border-gray-700 hover:border-primary/50 transition-all duration-300 hover-glow max-w-4xl mx-auto">
-            <CardContent className="p-8">
+        
               <div className="flex items-start">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
                   <Target className="w-8 h-8 text-white" />
@@ -279,8 +275,6 @@ const AboutUs = () => {
                   </p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
