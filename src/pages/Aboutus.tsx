@@ -335,7 +335,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      {/* Meet Our Team */}
+      {/* Meet Our Teams */}
        {/* Meet Our Team */}{/* Meet Our Team */}
 <section className="py-20 px-6 bg-brand-dark">
   <div className="container mx-auto">
