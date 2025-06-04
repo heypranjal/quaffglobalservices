@@ -42,7 +42,7 @@ const CTA = () => {
   <div className="flex flex-col md:flex-row gap-8 text-center">
     <div>
       <div className="text-accent font-semibold mb-2">Phone</div>
-      <div className="text-gray-300">+1 (555) 123-4567</div>
+      <div className="text-gray-300">+91 9999293689</div>
     </div>
     <div>
       <div className="text-accent font-semibold mb-2">Response Time</div>

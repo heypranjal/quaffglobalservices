@@ -95,8 +95,7 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-1">Email Us</h3>
-                    <p className="text-text-light/80">contact@quaffglobal.com</p>
-                    <p className="text-text-light/80">support@quaffglobal.com</p>
+                    <p className="text-text-light/80">info@quaffglobalservices.com</p>
                   </div>
                 </div>
 
@@ -106,8 +105,7 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-1">Call Us</h3>
-                    <p className="text-text-light/80">+1 (555) 123-4567</p>
-                    <p className="text-text-light/80">+1 (555) 987-6543</p>
+                    <p className="text-text-light/80">+91 9999293689</p>
                   </div>
                 </div>
 
@@ -118,14 +116,14 @@ const ContactUs = () => {
                   <div>
                     <h3 className="text-white font-semibold mb-1">Visit Us</h3>
                     <p className="text-text-light/80">
-                      123 Business Avenue<br />
-                      Suite 500<br />
-                      New York, NY 10001
+                     Amity Innovation center,<br />
+                      Sector-125,<br />
+                      Noida, India.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                {/* <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock className="w-6 h-6 text-primary" />
                   </div>
@@ -135,7 +133,7 @@ const ContactUs = () => {
                     <p className="text-text-light/80">Saturday: 10:00 AM - 4:00 PM</p>
                     <p className="text-text-light/80">Sunday: Closed</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
