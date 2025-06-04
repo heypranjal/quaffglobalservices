@@ -1,7 +1,20 @@
-// File: /api/contact.js
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-module.exports = async (req, res) => {
+const transporter = nodemailer.createTransport({
+  host: 'smtp.zoho.in',
+  port: 465,
+  secure: true,
+  auth: {
+    user: process.env.ZOHO_USER,
+    pass: process.env.ZOHO_PASS
+  },
+  tls: {
+    rejectUnauthorized: false,
+  }
+});
+
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
@@ -12,17 +25,7 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.zoho.in',
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.ZOHO_USER,
-      pass: process.env.ZOHO_PASS
-    }
-  });
-
-  const getAdminEmailContent = (data) => `
+  const getAdminEmailContent = (data: any) => `
     <div style="font-family: Arial; padding: 20px;">
       <h2>📩 New Contact Submission</h2>
       <p><strong>Name:</strong> ${data.name}</p>
@@ -34,7 +37,7 @@ module.exports = async (req, res) => {
     </div>
   `;
 
-  const getUserEmailContent = (name) => `
+  const getUserEmailContent = (name: string) => `
     <div style="font-family: Arial; padding: 20px;">
       <h2>Thank you for contacting Quaff Global Services</h2>
       <p>Hi ${name},</p>
@@ -44,7 +47,6 @@ module.exports = async (req, res) => {
   `;
 
   try {
-    // Send to admin
     await transporter.sendMail({
       from: `"Quaff Global Services" <${process.env.ZOHO_USER}>`,
       to: process.env.ZOHO_USER,
@@ -52,7 +54,6 @@ module.exports = async (req, res) => {
       html: getAdminEmailContent(data)
     });
 
-    // Auto-reply to user
     await transporter.sendMail({
       from: `"Quaff Global Services" <${process.env.ZOHO_USER}>`,
       to: data.email,
@@ -65,4 +66,4 @@ module.exports = async (req, res) => {
     console.error('Email Error:', err);
     return res.status(500).json({ error: 'Failed to send email' });
   }
-};
+}
