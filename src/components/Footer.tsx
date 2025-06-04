@@ -11,9 +11,10 @@ const Footer = () => {
   ];
 
   const company = [
-    "About Us",
-    "Our Team",
-    "Contact Us"
+    { name: "About Us", slug: "about" },
+    { name: "Contact Us", slug: "contact-us" },
+        { name: "Our Team", slug: "about" }
+
   ];
 
   return (
@@ -45,7 +46,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-gray-300">
                 <MapPin className="w-5 h-5 text-accent mr-3" />
-                    Amity Innovation center, sector-125, Noida. 
+                Amity Innovation center, sector-125, Noida.
               </div>
             </div>
           </div>
@@ -74,10 +75,10 @@ const Footer = () => {
               {company.map((item, index) => (
                 <li key={index}>
                   <Link
-                    to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                    to={`/${item.slug}`}
                     className="text-gray-300 hover:text-accent transition-colors duration-300"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}

@@ -185,18 +185,18 @@ const AboutUs = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-12 px-6 bg-gray-900/50">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-white">Our</span>{" "}
               <span className="text-gradient">Story</span>
             </h2>
-            <div className="flex justify-center items-center mb-8">
+            {/* <div className="flex justify-center items-center mb-8">
               <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
                 <span className="text-3xl font-bold text-white">QGS</span>
               </div>
-            </div>
+            </div> */}
             <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Quaff Global Services was founded by a diverse team of accomplished entrepreneurs who bring together decades of combined expertise across technology, business, and digital innovation.
             </p>

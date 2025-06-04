@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import {  Menu, Search } from 'lucide-react';
-import {Link} from 'react-router-dom';
+import { Menu, Search, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import {
   Command,
   CommandEmpty,
@@ -16,17 +16,30 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const navItems = [
-    { name: 'Services', href: '#services' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact Us', href: '/contact-us' }
+  ];
+
+  const serviceItems = [
+    { name: 'IT & Software Development', href: '/it-services' },
+    { name: 'Business Process Outsourcing (BPO)', href: '/bpo' },
+    { name: 'Digital & Creative Services', href: '/digital-creative-services' },
+    { name: 'Technical & Professional Services', href: '/technical-professional-services' },
+    { name: 'Our HR & Staffing Services', href: '/hr' }
   ];
 
   const searchableItems = [
@@ -49,7 +62,6 @@ const Header = () => {
     { title: 'Legal Process Outsourcing', href: '/legal-process-outsourcing', category: 'Services' },
     { title: 'Market Research & Business Analytics', href: '/market-research-business-analytics', category: 'Services' },
     { title: 'Our HR and Staffing Services', href: '/hr', category: 'Services' },
-   
   ];
 
   const filteredItems = searchableItems.filter(item =>
@@ -72,18 +84,40 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-       <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-  <img
-    src="src\assets\logoquaff.png" // replace with your actual image path
-    alt="Quaff Global Services Logo"
-    className="w-12 h-12 rounded-full object-cover"
-  />
-  <span className="text-xl font-bold text-white">Quaff Global Services</span>
-</a>
-
+          <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+            <img
+              src="src\assets\logoquaff.png" // replace with your actual image path
+              alt="Quaff Global Services Logo"
+              className="w-12 h-12 rounded-full object-cover"
+            />
+            <span className="text-xl font-bold text-white">Quaff Global Services</span>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
+            {/* Services Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center text-text-light hover:text-accent transition-colors duration-300 font-medium group">
+                  Services
+                  <ChevronDown className="ml-1 h-4 w-4 transition-transform group-data-[state=open]:rotate-180" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-64 bg-gray-800 border-gray-600">
+                {serviceItems.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link
+                      to={item.href}
+                      className="text-gray-200 hover:text-white hover:bg-gray-700 cursor-pointer px-3 py-2 text-sm"
+                    >
+                      {item.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Other Nav Items */}
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -144,11 +178,11 @@ const Header = () => {
             </Popover>
 
             {/* CTA Button */}            
-<Link to="/contact-us">
-  <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover-glow">
-    Get Started
-  </Button>
-</Link>
+            <Link to="/contact-us">
+              <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover-glow">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -195,6 +229,32 @@ const Header = () => {
             </div>
 
             <nav className="flex flex-col space-y-4">
+              {/* Mobile Services Section */}
+              <div>
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="flex items-center justify-between w-full text-text-light hover:text-accent transition-colors duration-300 font-medium"
+                >
+                  Services
+                  <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isServicesOpen && (
+                  <div className="mt-2 ml-4 space-y-2">
+                    {serviceItems.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className="block text-gray-300 hover:text-accent transition-colors duration-300 text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Other Mobile Nav Items */}
               {navItems.map((item) => (
                 <a
                   key={item.name}
