@@ -6,28 +6,28 @@ import { ArrowRight, Code, Users, Star } from 'lucide-react';
 const CaseStudies = () => {
   const caseStudies = [
     {
-      title: "E-Commerce Platform Transformation",
+      title: "Career Accelerator Digital Transformation",
       category: "Technology Development",
-      description: "Complete digital transformation of a traditional retail business, resulting in 300% increase in online sales and improved customer experience.",
+      description: "Complete digital revamp of Halp’s online presence to boost program enrollments, improve brand visibility, and drive career empowerment across global markets.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3",
-      results: ["300% Sales Increase", "50% Faster Load Times", "99.9% Uptime"],
+      results: ["180% Increase in Program Enrollments","250% Rise in Qualified Applicants","65% Longer Session Duration","40% Growth in Employer Partnerships","85% Job Placement Rate Visibility"],
       tech: ["React", "Node.js", "AWS", "PostgreSQL"]
     },
     {
-      title: "AI-Powered Analytics Dashboard",
-      category: "AI & Analytics",
-      description: "Custom analytics platform with machine learning capabilities that helped a fintech company reduce fraud by 85% and improve decision-making.",
+      title: "HR & Staffing Expansion for Global Wine-Tech Startup",
+      category: "HR & Staffing Expansion for Global Wine-Tech Startup",
+      description: "End-to-end HR transformation for Aveine, enabling global expansion through strategic recruitment, cross-cultural team building, and international compliance..",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3",
-      results: ["85% Fraud Reduction", "60% Faster Analysis", "Real-time Insights"],
-      tech: ["Python", "TensorFlow", "React", "Docker"]
+      results: ["25+ Hires Across 8 Countries", "60% Faster Time-to-Hire", "95% Candidate Retention Rate", "Operations Established in 4 New Markets", "30% Boost in Employee Satisfaction"],
+      tech: ["BambooHR", "Deel", "Notion", "Slack", "ATS Platforms (Greenhouse, Lever)"]
     },
     {
-      title: "Digital Marketing Campaign Success",
-      category: "Creative Marketing",
-      description: "Comprehensive digital marketing strategy that increased brand awareness by 250% and generated 500% ROI for a B2B software company.",
+      title: "Digital Entertainment BPO Transformation",
+      category: "Digital Entertainment BPO Transformation",
+      description: "Scalable business process outsourcing for Hungama to streamline content operations, multilingual customer support, and analytics during exponential user growth..",
       image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3",
-      results: ["250% Brand Awareness", "500% ROI", "10x Lead Generation"],
-      tech: ["SEO", "SEM", "Social Media", "Content Marketing"]
+      results: ["40% Reduction in Operational Costs", "60% Faster Content Processing", "25% Boost in Recommendation Engine Accuracy","3x User Growth Supported Without Cost Spike", "4.6/5 Customer Satisfaction Score",],
+      tech: ["Zendesk", "Freshdesk", "Power BI", "Custom CMS Integrations"]
     }
   ];
 

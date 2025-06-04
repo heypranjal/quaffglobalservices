@@ -5,23 +5,23 @@ import { Star } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "ab",
-      position: "CTO",
-      company: "TechFlow Solutions",
+      name: "Alexa Wight",
+      position: "Operations Manager",
+      company: "Halp",
       content: "Quaff Global Services transformed our brand identity completely. Their creative team delivered stunning visuals and a digital strategy that increased our online engagement by 300%. Professional, innovative, and always on time!.",
       rating: 5
     },
     {
-      name: "abc",
+      name: "Nicolas Naigeon",
       position: "Founder & CEO",
-      company: "InnovateLab",
+      company: "Aveine",
       content: "Finding the right talent used to be our biggest challenge. Quaff Global Services's HR team not only filled our positions quickly but also found candidates who perfectly fit our culture. They saved us months of recruitment time.",
       rating: 5
     },
     {
-      name: "Ebc",
-      position: "Marketing Director",
-      company: "GrowthCorp",
+      name: "Anuj Bajpai",
+      position: "Chief Operating Officer",
+      company: " Hungama Digital Media Entertainment",
       content: "Outsourcing our customer service to Quaff Global Services was the best decision we made. Their team handles our clients with such professionalism that satisfaction scores improved by 40%. Cost-effective and reliable!",
       rating: 5
     }
