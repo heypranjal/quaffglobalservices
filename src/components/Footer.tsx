@@ -46,7 +46,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-gray-300">
                 <MapPin className="w-5 h-5 text-accent mr-3" />
-                Amity Innovation center, sector-125, Noida.
+                Amity Innovation center, sector-125, Noida, India
               </div>
             </div>
           </div>
