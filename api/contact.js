@@ -1,20 +1,6 @@
-import nodemailer from 'nodemailer';
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+const nodemailer = require('nodemailer');
 
-const transporter = nodemailer.createTransport({
-  host: 'smtp.zoho.in',
-  port: 465,
-  secure: true,
-  auth: {
-    user: process.env.ZOHO_USER,
-    pass: process.env.ZOHO_PASS
-  },
-  tls: {
-    rejectUnauthorized: false,
-  }
-});
-
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
@@ -25,7 +11,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
-  const getAdminEmailContent = (data: any) => `
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.zoho.in',
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.ZOHO_USER,
+      pass: process.env.ZOHO_PASS,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+
+  const getAdminEmailContent = (data) => `
     <div style="font-family: Arial; padding: 20px;">
       <h2>📩 New Contact Submission</h2>
       <p><strong>Name:</strong> ${data.name}</p>
@@ -37,7 +36,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     </div>
   `;
 
-  const getUserEmailContent = (name: string) => `
+  const getUserEmailContent = (name) => `
     <div style="font-family: Arial; padding: 20px;">
       <h2>Thank you for contacting Quaff Global Services</h2>
       <p>Hi ${name},</p>
@@ -48,17 +47,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   try {
     await transporter.sendMail({
-      from: `"Quaff Global Services" <${process.env.ZOHO_USER}>`,
+      from: `"Quaff" <${process.env.ZOHO_USER}>`,
       to: process.env.ZOHO_USER,
       subject: 'New Contact Form Submission',
-      html: getAdminEmailContent(data)
+      html: getAdminEmailContent(data),
     });
 
     await transporter.sendMail({
-      from: `"Quaff Global Services" <${process.env.ZOHO_USER}>`,
+      from: `"Quaff" <${process.env.ZOHO_USER}>`,
       to: data.email,
       subject: 'We received your inquiry!',
-      html: getUserEmailContent(data.name)
+      html: getUserEmailContent(data.name),
     });
 
     return res.status(200).json({ success: true });
@@ -66,4 +65,4 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     console.error('Email Error:', err);
     return res.status(500).json({ error: 'Failed to send email' });
   }
-}
+};
