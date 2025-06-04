@@ -1,4 +1,3 @@
-// File: /api/contact.js
 const nodemailer = require('nodemailer');
 
 module.exports = async (req, res) => {
@@ -18,8 +17,11 @@ module.exports = async (req, res) => {
     secure: true,
     auth: {
       user: process.env.ZOHO_USER,
-      pass: process.env.ZOHO_PASS
-    }
+      pass: process.env.ZOHO_PASS,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
   });
 
   const getAdminEmailContent = (data) => `
@@ -44,20 +46,18 @@ module.exports = async (req, res) => {
   `;
 
   try {
-    // Send to admin
     await transporter.sendMail({
-      from: `"Quaff Global Services" <${process.env.ZOHO_USER}>`,
+      from: `"Quaff" <${process.env.ZOHO_USER}>`,
       to: process.env.ZOHO_USER,
       subject: 'New Contact Form Submission',
-      html: getAdminEmailContent(data)
+      html: getAdminEmailContent(data),
     });
 
-    // Auto-reply to user
     await transporter.sendMail({
-      from: `"Quaff Global Services" <${process.env.ZOHO_USER}>`,
+      from: `"Quaff" <${process.env.ZOHO_USER}>`,
       to: data.email,
       subject: 'We received your inquiry!',
-      html: getUserEmailContent(data.name)
+      html: getUserEmailContent(data.name),
     });
 
     return res.status(200).json({ success: true });

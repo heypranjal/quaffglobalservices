@@ -40,24 +40,33 @@ const ContactUs = () => {
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
+  const form = {
+    name: formData.name,
+    phone: formData.phone,
+    email: formData.email,
+    service: formData.service,
+    address: formData.address,
+    message: formData.message
+  };
+
   try {
-    const response = await fetch('/api/contact', {
+    const response = await fetch('https://formsubmit.co/ajax/info@quaffglobalservices.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        Accept: 'application/json',
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(form),
     });
 
     const result = await response.json();
 
-    if (response.ok && result.success) {
+    if (response.ok && result.success === 'true') {
       toast({
         title: "Message Sent!",
         description: "Thank you for contacting us. We'll get back to you soon.",
       });
 
-      // Reset form
       setFormData({
         name: '',
         phone: '',
@@ -69,19 +78,20 @@ const ContactUs = () => {
     } else {
       toast({
         title: "Failed to send",
-        description: result.error || "Please try again.",
+        description: result.message || "Something went wrong.",
         variant: "destructive",
       });
     }
-  } catch (error) {
-    console.error('Submission Error:', error);
+  } catch (err) {
+    console.error('FormSubmit Error:', err);
     toast({
       title: "Error",
-      description: "An error occurred. Please try later.",
+      description: "Unable to send message. Please try again later.",
       variant: "destructive",
     });
   }
 };
+
 
   return (
     <div className="min-h-screen bg-brand-dark">
