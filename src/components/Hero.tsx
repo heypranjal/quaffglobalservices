@@ -23,17 +23,18 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="text-white">Transforming</span>
+            <span className="text-gradient">Solutions </span>
+            
+            <span className="text-white">that scales.</span>
             <br />
-            <span className="text-gradient">Digital Visions</span>
-            <br />
-            <span className="text-white">Into Reality</span>
+            <span className="text-gradient">Service </span>
+            
+            <span className="text-white">that delivers.</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Cutting-edge digital solutions, innovative technology development, and strategic consulting 
-            that propel forward-thinking businesses into the future.
+           Transform your business with Quaff Global Services - your one-stop destination for cutting-edge IT solutions, comprehensive BPO services, and creative digital excellence. From custom software development to complete business process outsourcing, we deliver the expertise and innovation your business needs to thrive globally. 
           </p>
 
           {/* CTA Buttons */}
