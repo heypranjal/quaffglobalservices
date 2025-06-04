@@ -79,12 +79,12 @@ const TechnicalProfessionalServices = () => {
             Empowering your business with comprehensive technical solutions and professional expertise. 
             From IT infrastructure to specialized consulting, we deliver excellence across every domain.
           </p>
-          <Button 
+          {/* <Button 
             className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg font-semibold hover-glow"
             onClick={() => window.location.href = '/#contact'}
           >
             Explore Our Services
-          </Button>
+          </Button> */}
         </div>
       </section>
 
