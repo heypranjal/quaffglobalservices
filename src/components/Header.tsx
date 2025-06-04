@@ -260,7 +260,12 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button className="w-full mt-4 bg-primary text-white">Get Started</Button>
+<Button 
+  className="w-full mt-4 bg-primary text-white"
+  onClick={() => window.location.href = '/contact-us'}
+>
+  Get Started
+</Button>
             </div>
           </div>
         )}
