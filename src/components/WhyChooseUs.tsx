@@ -43,7 +43,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-brand-dark">
+    <section className="py-10 px-6 bg-brand-dark">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}

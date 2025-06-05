@@ -186,7 +186,7 @@ const HumanResourceOutsourcing = () => {
       </section>
 
       {/* Recruitment Services Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-10 px-6 bg-brand-dark">
         <div className="container mx-auto">
           <div className="flex items-start space-x-4 mb-8">
             <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
@@ -205,7 +205,7 @@ const HumanResourceOutsourcing = () => {
       </section>
 
       {/* Employee Onboarding Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-10 px-6 bg-gray-900/50">
         <div className="container mx-auto">
           <div className="flex items-start space-x-4 mb-8">
             <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
@@ -224,7 +224,7 @@ const HumanResourceOutsourcing = () => {
       </section>
 
       {/* Background Checks Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-10 px-6 bg-brand-dark">
         <div className="container mx-auto">
           <div className="flex items-start space-x-4 mb-8">
             <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
@@ -243,7 +243,7 @@ const HumanResourceOutsourcing = () => {
       </section>
 
       {/* Employee Data Management Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-10 px-6 bg-gray-900/50">
         <div className="container mx-auto">
           <div className="flex items-start space-x-4 mb-8">
             <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
@@ -262,7 +262,7 @@ const HumanResourceOutsourcing = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-10 px-6 bg-brand-dark">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -295,7 +295,7 @@ const HumanResourceOutsourcing = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-10 px-6 bg-gray-900/50">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Transform Your HR Operations?

@@ -74,7 +74,7 @@ const FinanceAccountingServices = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-10 px-6 bg-gray-900/50">
         <div className="container mx-auto">
           <div className="space-y-16">
             {services.map((service, index) => (
@@ -126,7 +126,7 @@ const FinanceAccountingServices = () => {
       </section>
 
       {/* Software Solutions Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-10 px-6 bg-brand-dark">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -153,7 +153,7 @@ const FinanceAccountingServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-10 px-6 bg-gray-900/50">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Streamline Your Finances?

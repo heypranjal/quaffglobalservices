@@ -4,7 +4,7 @@ import { ArrowRight, Mail, Phone } from 'lucide-react';
 
 const CTA = () => {
   return (
-    <section id="contact" className="py-20 px-6 bg-gradient-to-br from-gray-900 via-primary/10 to-gray-900 relative overflow-hidden">
+    <section id="contact" className="py-10 px-6 bg-gradient-to-br from-gray-900 via-primary/10 to-gray-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>

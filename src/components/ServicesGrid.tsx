@@ -56,7 +56,7 @@ const ServicesGrid = () => {
   ];
 
   return (
-    <section id="services" className="py-20 px-6 bg-gray-900/50">
+    <section id="services" className="py-10 px-6 bg-gray-900/50">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">

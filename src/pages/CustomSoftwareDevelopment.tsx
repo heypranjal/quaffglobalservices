@@ -124,7 +124,7 @@ const CustomSoftwareDevelopment = () => {
       </section>
 
       {/* What We Build Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-10 px-6 bg-gray-900/50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -154,7 +154,7 @@ const CustomSoftwareDevelopment = () => {
       </section>
 
       {/* Development Process Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-10 px-6 bg-brand-dark">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -202,7 +202,7 @@ const CustomSoftwareDevelopment = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-10 px-6 bg-gray-900/50">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Build Your Custom Solution?

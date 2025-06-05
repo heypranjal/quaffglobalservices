@@ -61,7 +61,7 @@ const CaseStudy3 = () => {
       </section>
 
       {/* Client Overview */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-10 px-6 bg-gray-900/50">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Client: Hungama – Digital Entertainment Platform</h2>
           <p className="text-gray-300 max-w-5xl leading-relaxed">
@@ -71,7 +71,7 @@ const CaseStudy3 = () => {
       </section>
 
       {/* Challenge */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-10 px-6 bg-brand-dark">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">The Challenge</h2>
           <p className="text-gray-300 max-w-4xl leading-relaxed">
@@ -81,7 +81,7 @@ const CaseStudy3 = () => {
       </section>
 
       {/* Our Solution */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-10 px-6 bg-gray-900/50">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Our Solution</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -97,7 +97,7 @@ const CaseStudy3 = () => {
       </section>
 
       {/* Service Delivery Framework */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-10 px-6 bg-brand-dark">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Service Delivery Framework</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -113,7 +113,7 @@ const CaseStudy3 = () => {
       </section>
 
       {/* Results */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-10 px-6 bg-gray-900/50">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Results</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -129,7 +129,7 @@ const CaseStudy3 = () => {
       </section>
 
       {/* Key Performance Indicators */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-10 px-6 bg-brand-dark">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Key Performance Indicators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -145,7 +145,7 @@ const CaseStudy3 = () => {
       </section>
 
       {/* Technology Integration */}
-      <section className="py-20 px-6 bg-gray-900/50">
+      <section className="py-10 px-6 bg-gray-900/50">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Technology Integration</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -161,7 +161,7 @@ const CaseStudy3 = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-brand-dark">
+      <section className="py-10 px-6 bg-brand-dark">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Streamline Your Operations with Our BPO Services
